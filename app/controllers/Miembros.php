@@ -65,7 +65,7 @@ class Miembros extends Controlador{
             }
 
             if (!$this->miembroModelo->dniExiste($_POST['documento_identidad'])) {
-                $datos['dniError'] = "El dni ya está registrado";
+                $datos['dniError'] = " El dni ya está registrado";
                 $siErrores = true;
             }
             if (!preg_match('/^[0-9]{8}[A-Z]{1}$/',$_POST['documento_identidad'])) {
@@ -120,7 +120,7 @@ class Miembros extends Controlador{
                 $siErrores = true;
             }
 
-            if (!$this->clienteModelo->loginExiste($_POST['usuario'])) {
+            if (!$this->miembroModelo->loginExiste($_POST['usuario'])) {
                 $datos['usuarioError'] = " El login ya está registrado.";
                 $siErrores = true;
             }
@@ -198,7 +198,7 @@ class Miembros extends Controlador{
                         $siErrores = true;
                     }
                 }
-                 // Si hay errores, se vuelve a cargar la vista con los datos y los errores
+                // Si hay errores, se vuelve a cargar la vista con los datos y los errores
                 if ($siErrores) {
                     $this->vista('miembros/agregar', $datos);
                 } else {
