@@ -133,7 +133,7 @@ class Actividades extends Controlador {
             $cuerpo .= "<strong>Fecha inicio:</strong> " . $_SESSION['fecha_inicio'] . "<br>";
             $cuerpo .= "<strong>Fecha final:</strong> " . $_SESSION['fecha_fin'] . "<br>";
             $cuerpo .= "<strong>Maxima participantes:</strong> " . $_SESSION['cantidad_personas'] . "<br>";            
-            $cuerpo .= "<strong>Descripción:</strong> " .  $_SESSION['velocidadMax'] . "<br>";
+            $cuerpo .= "<strong>Descripción:</strong> " .  $_SESSION['descripcion'] . "<br>";
             $cuerpo .= "</p>";
             $mail->isHTML(true);
             $mail->Body = $cuerpo;
