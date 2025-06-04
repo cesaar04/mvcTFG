@@ -6,7 +6,7 @@
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <h1 class="text-center mb-4">Datos del cliente a borrar</h1>
+      <h1 class="text-center mb-4">Datos del miembro a borrar</h1>
       
       <div class="card p-4 shadow-sm rounded">
         <p><strong>Id:</strong> <?php echo $datos->id_Miembro; ?></p>
